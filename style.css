@@ -144,6 +144,9 @@ nav li a {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fffcfa;
+    position: relative;
+    z-index: 0;
 }
 
 .box-text {
@@ -224,9 +227,9 @@ nav li a {
 }
 
 .agency-info a:hover::after {
-    cursor: pointer;
     opacity: 0.8;
 }
+
 .information-box:nth-of-type(3) .agency-info a::after {
     background-color: var(--softred);
 }
@@ -264,6 +267,7 @@ nav li a {
     font-family: var(--title);
     font-size: 2rem;
     font-weight: 900;
+    margin-bottom: 30px;
 }
 
 .graphic-design p, .photography p {
