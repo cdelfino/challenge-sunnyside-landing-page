@@ -121,6 +121,7 @@ nav li a {
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    background-position: center;
 }
 
 .section1-title {
@@ -130,6 +131,7 @@ nav li a {
     letter-spacing: 0.7rem;
     font-weight: 900;
     padding-top: 240px;
+    text-align: center;
 }
 
 .section1-arrow {
@@ -147,6 +149,9 @@ nav li a {
     background-color: #fffcfa;
     position: relative;
     z-index: 0;
+}
+html,body{
+    overflow-x: hidden;
 }
 
 .box-text {
@@ -247,12 +252,14 @@ nav li a {
     background-image: url(./images/desktop/image-graphic-design.jpg);
     background-size: cover;
     color: var(--darkdesaturatedcyan);
+    background-position: center;
 }
 
 .photography {
     background-image: url(./images/desktop/image-photography.jpg);
     background-size: cover;
     color: var(--darkblue);
+    background-position: center;
 }
 
 .graphic-design-info, .photography-info {
@@ -284,7 +291,6 @@ nav li a {
 }
 
 .testimony {
-    text-align: center;
     width: 24%;
     display: flex;
     flex-direction: column;
@@ -308,6 +314,7 @@ nav li a {
     height: 1000px;
     background-color: #fffcfa;
     gap: 130px;
+    text-align: center;
 }
 
 .client-testimonials h2 {
@@ -368,6 +375,7 @@ nav li a {
     width: 100%;
     height: 100%;
     background-size: cover;
+    background-position: center;
 }
 
 .milkbottles {
@@ -444,4 +452,97 @@ footer {
 
 .attribution a {
     color: #2e7264;
+}
+
+header button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    /* Set font styles as desired */
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 50px;
+    height: 30px !important;
+}
+
+/*Media queries*/
+@media only screen and (max-width: 575px) {
+    /* CSS rules for small mobile devices */
+    .navbar-links{
+        display:  none;
+    }
+
+    .section1-title {
+        font-size: 3.9rem;
+        padding-top: 190px;
+    }
+
+    .information-box {
+        flex-direction: column-reverse;
+        height: 1004px;
+    }
+
+    .box-image, .box-text {
+        width: 100%;
+        text-align: center;
+        background-position: center;
+    }
+
+    .agency-info {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .agency-info p {
+        line-height: 2.1rem;
+    }
+
+    .information-box:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    .design-photography-info{
+        flex-direction: column !important;
+        height: 1500px;
+    }
+
+    .graphic-design-info, .photography-info {
+        width: 77%;
+    }
+
+    .graphic-design p, .photography p {
+        line-height: 2.3rem;
+    }
+
+    .testimonies-box{
+        flex-direction: column;
+    }
+
+    .testimony {
+        width: 86%;
+        gap: 40px;
+    }
+
+    .client-testimonials h2 {
+        font-size: 1.1rem;
+    }
+
+    .client-testimonials {
+        height: 1650px;
+    }
+
+    .img-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+
 }
