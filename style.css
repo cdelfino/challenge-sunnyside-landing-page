@@ -481,7 +481,7 @@ header button {
     }
 
     .section1-title {
-        font-size: 3.9rem;
+        font-size: 3rem;
         padding-top: 190px;
     }
 
@@ -545,4 +545,11 @@ header button {
         grid-gap: 0px;
     }
 
+}
+
+@media only screen and (max-width: 497px) {
+    /* CSS rules for even smaller mobile devices */
+    .section1-title {
+        font-size: 2.4rem;
+    }
 }
