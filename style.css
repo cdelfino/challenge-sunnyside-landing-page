@@ -57,18 +57,16 @@ header {
   top: 0; /* slide the navbar into view */
 }
 
-
-
-/*.navbar-hidden {
-    opacity: 0;
-}*/
-
 header img {
     height: 45px;
     margin-left: 60px;
 }
 
-nav ul {
+.logo{
+    margin-top: 0 !important;
+}
+
+.links{
     display: flex;
     margin-right: 60px;
     align-items: center;
@@ -85,10 +83,15 @@ nav li a {
     color: #fff;
 }
 
+.navbar-toggle{
+    display: none;
+}
+
 .navbar-links ul li a:hover {
     text-decoration: none;
     color: #ffe054;
-}  
+}
+
 
 .cta-button {
     color: var(--darkblue);
@@ -471,13 +474,108 @@ header button {
 .icon {
     margin-right: 50px;
     height: 30px !important;
+    padding: 15px;
 }
 
 /*Media queries*/
-@media only screen and (max-width: 575px) {
+
+@media only screen and (max-width: 1118px) {
+
+    .links{
+        margin-right: 0;
+    }
+
+    nav li a{
+        margin-right: 39px;
+    }
+  
+    header img {
+        margin: 29px;
+    }
+
+}
+
+@media only screen and (max-width: 982px) {
+
+    header img {
+        margin: 23px;
+        height: 36px;
+    }
+    nav li a {
+        font-size: 1.1rem;
+        margin-right: 33px;
+    }
+}
+
+
+@media only screen and (max-width: 728px) {
     /* CSS rules for small mobile devices */
-    .navbar-links{
-        display:  none;
+    
+    .section1-title {
+        font-size: 2.4rem;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        height: 315px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: hsl(30, 100%, 99%);
+        padding: 10px;
+        margin: 0 auto;
+        width: 83%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show-navbar{
+        display: block;
+    }
+
+
+    header img {
+        height: 30px;
+        margin-left: 37px;
+    }
+
+    .section1-arrow {
+        display: none;
+    }
+
+    .cta-button {
+        background-color: var(--yellow);
+        color: var(--verydarkdesaturatedblue);
+    }
+
+    header{
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+    
+    nav li a {
+        color: var(--darkgrayishblue);
+        margin: 0 auto;
+    }
+
+    header a{
+        margin-top: 7px;
+    }
+
+    nav li {
+        padding: 1.2rem 0;
     }
 
     .section1-title {
@@ -545,11 +643,4 @@ header button {
         grid-gap: 0px;
     }
 
-}
-
-@media only screen and (max-width: 497px) {
-    /* CSS rules for even smaller mobile devices */
-    .section1-title {
-        font-size: 2.4rem;
-    }
 }
